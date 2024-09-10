@@ -110,3 +110,25 @@ window.onload = function() {
     loadCategories();  // Carica le categorie
     getExpenses();     // Carica le spese
 };
+
+// Funzione per attivare/disattivare la modalità scura
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+}
+
+// Configura il listener per l'invio del form
+document.getElementById('expenseForm').addEventListener('submit', addExpense);
+
+// Configura il listener per il toggle della modalità scura
+document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+
+// Funzione per caricare le categorie e le spese all'avvio
+window.onload = function() {
+    loadCategories();  // Carica le categorie
+    getExpenses();     // Carica le spese
+    // Imposta la modalità scura se è stata precedentemente salvata
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+};
