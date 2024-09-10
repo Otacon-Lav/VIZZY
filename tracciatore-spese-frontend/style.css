@@ -1,0 +1,83 @@
+/* Stile base per il corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stile per l'intestazione */
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Stile per il modulo di inserimento spesa */
+form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #28a78c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #1e675c;
+}
+
+/* Stile per la lista delle spese */
+h2 {
+    color: #333;
+}
+
+#expenseList {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    max-width: 600px;
+}
+
+#expenseList li {
+    background-color: #dedfe4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#expenseList li:nth-child(odd) {
+    background-color: #ffffff;
+}
